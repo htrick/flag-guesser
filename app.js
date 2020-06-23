@@ -1,5 +1,6 @@
 let correctScore = 0;
 let incorrectScore = 0;
+let actualPosition;
 const guess_div = [document.getElementById("guess-a"),
     document.getElementById("guess-b"), document.getElementById("guess-c")];
 const guess_p = [document.getElementById("p-a"), document.getElementById("p-b"),
@@ -7,6 +8,8 @@ const guess_p = [document.getElementById("p-a"), document.getElementById("p-b"),
 const flag_img = document.getElementById("flag");
 const correct_span = document.getElementById("correct-score");
 const incorrect_span = document.getElementById("incorrect-score");
+const correct_div = document.getElementById("correct");
+const incorrect_div = document.getElementById("incorrect");
 const flags = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola",
     "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria",
     "Azerbaijan", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium",
@@ -44,7 +47,6 @@ const flags = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola",
     "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu",
     "Uganda", "Ukraine", "Uruguay", "Uzbekistan", "Vatican City", "Venezuela",
     "Vietnam", "Yemen", "Zambia", "Zimbabwe"];
-let actualPosition = updateSet();
 
 function updateSet() {
     const correct = Math.floor(Math.random() * 196);
@@ -81,21 +83,26 @@ function updateSet() {
 function checkGuess(guess) {
     guess_div[actualPosition].classList.add("green-glow");
     setTimeout(() => guess_div[actualPosition].classList.remove("green-glow"),
-        600);
+        1500);
     if (guess === actualPosition) {
         correctScore++;
         correct_span.innerHTML = correctScore;
+        correct_div.classList.add("green-back");
+        setTimeout(() => correct_div.classList.remove("green-back"), 1500);
     }
     else {
         incorrectScore++;
         incorrect_span.innerHTML = incorrectScore;
         guess_div[guess].classList.add("red-glow");
-        setTimeout(() => guess_div[guess].classList.remove("red-glow"), 600);
+        setTimeout(() => guess_div[guess].classList.remove("red-glow"), 1500);
+        incorrect_div.classList.add("red-back");
+        setTimeout(() => incorrect_div.classList.remove("red-back"), 1500);
     }
-    setTimeout(() => actualPosition = updateSet(), 1000);
+    setTimeout(() => actualPosition = updateSet(), 2000);
 }
 
 function main() {
+    actualPosition = updateSet();
     guess_div[0].addEventListener("click", () => checkGuess(0));
     guess_div[1].addEventListener("click", () => checkGuess(1));
     guess_div[2].addEventListener("click", () => checkGuess(2));

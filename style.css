@@ -78,3 +78,13 @@ header > h1 {
     border: 2px solid #ff0000;
     box-shadow: 0 0 10px #990000;
 }
+
+.green-back {
+    background-color: #006600;
+    box-shadow: 0 0 20px #006600;
+}
+
+.red-back {
+    background-color: #990000;
+    box-shadow: 0 0 20px #990000;
+}

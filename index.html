@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flag Guesser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Flag Guesser</h1>
+    </header>
+    <div class="score-board">
+        <div class="score" id="correct">
+            <span>Correct:</span>
+            <span id="correct-score">0</span>
+        </div>
+        <div class="score" id="incorrect">
+            <span>Incorrect:</span>
+            <span id="incorrect-score">0</span>
+        </div>
+    </div>
+    <div class="flag">
+        <img src="" alt="" id="flag">
+    </div>
+    <p id="instruction-message">Which country has this flag?</p>
+    <div class="options">
+        <div class="option" id="guess-a">
+            <p id="p-a"></p>
+        </div>
+        <div class="option" id="guess-b">
+            <p id="p-b"></p>
+        </div>
+        <div class="option" id="guess-c">
+            <p id="p-c"></p>
+        </div>
+    </div>
+    <script src="app.js" charset="utf-8"></script>
+</body>
+</html>

@@ -8,55 +8,59 @@
     font-family: Asap, sans-serif;
 }
 
-body {
+.app {
     background-color: #2d2d39;
-}
-
-header {
-    background-color: white;
-    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 header > h1 {
+    background-color: #e7e7e7;
+    width: 100vw;
+    padding: 1rem;
+    font-size: 2rem;
     color: #2d2d39;
 }
 
 .score-board {
-    margin: 20px auto;
-    border-bottom: 2px solid white;
-    width: 150px;
-    padding: 5px 5px;
-    position: relative;
+    border-bottom: 0.15rem solid #e7e7e7;
+    width: 15rem;
 }
 
-.score {
-    color: white;
-    font-size: 20px;
-    padding: 3px;
+.score-board > div {
+    color: #e7e7e7;
+    font-size: 1.5rem;
+    padding: 0.2rem;
 }
 
-.flag {
-    margin: 40px 10px 30px 10px;
+#flag {
+    margin: 4% 2% 5% 2%;
+    max-height: 30em;
 }
 
-.flag > img {
-    max-height: 500px;
-}
-
-#instruction-message {
-    color: white;
-    margin: 0 auto 20px auto;
-    font-size: 20px;
+.instruction-message {
+    color: #e7e7e7;
+    font-size: 1.75rem;
     font-weight: bold;
+    margin-bottom: 2%;
+}
+
+.options {
+    width: 96%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .option {
-    border: 2px solid white;
-    border-radius: 10px;
-    margin: 0 20px;
-    padding: 10px;
-    display: inline-block;
-    transition: all 0.6s ease
+    border: 0.125rem solid #e7e7e7;
+    border-radius: 1rem;
+    padding: 0.9rem;
+    transition: all 0.6s ease;
 }
 
 .option:hover {
@@ -65,26 +69,32 @@ header > h1 {
 }
 
 .option > p {
-    color: white;
-    font-size: 18px;
+    color: #e7e7e7;
+    font-size: 1.2rem;
 }
 
 .green-glow {
-    border: 2px solid #00cc00;
-    box-shadow: 0 0 10px #006600;
+    border: 0.125rem solid #00cc00;
+    box-shadow: 0 0 1rem #006600;
 }
 
 .red-glow {
-    border: 2px solid #ff0000;
-    box-shadow: 0 0 10px #990000;
+    border: 0.125rem solid #ff0000;
+    box-shadow: 0 0 1rem #990000;
 }
 
 .green-back {
     background-color: #006600;
-    box-shadow: 0 0 20px #006600;
+    box-shadow: 0 0 2rem #006600;
 }
 
 .red-back {
     background-color: #990000;
-    box-shadow: 0 0 20px #990000;
+    box-shadow: 0 0 2rem #990000;
+}
+
+@media (min-width: 65rem) {
+    .options {
+        width: 30%;
+    }
 }

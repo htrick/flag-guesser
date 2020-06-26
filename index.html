@@ -7,34 +7,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Flag Guesser</h1>
-    </header>
-    <div class="score-board">
-        <div class="score" id="correct">
-            <span>Correct:</span>
-            <span id="correct-score">0</span>
+    <section class="app">
+        <header>
+            <h1>Flag Guesser</h1>
+        </header>
+        <div class="score-board">
+            <div id="correct">
+                <span>Correct:</span>
+                <span id="correct-score">0</span>
+            </div>
+            <div id="incorrect">
+                <span>Incorrect:</span>
+                <span id="incorrect-score">0</span>
+            </div>
         </div>
-        <div class="score" id="incorrect">
-            <span>Incorrect:</span>
-            <span id="incorrect-score">0</span>
-        </div>
-    </div>
-    <div class="flag">
         <img src="" alt="" id="flag">
-    </div>
-    <p id="instruction-message">Which country has this flag?</p>
-    <div class="options">
-        <div class="option" id="guess-a">
-            <p id="p-a"></p>
+        <span class="instruction-message">Which country has this flag?</span>
+        <div class="options">
+            <div class="option" id="guess-a">
+                <p id="p-a"></p>
+            </div>
+            <div class="option" id="guess-b">
+                <p id="p-b"></p>
+            </div>
+            <div class="option" id="guess-c">
+                <p id="p-c"></p>
+            </div>
         </div>
-        <div class="option" id="guess-b">
-            <p id="p-b"></p>
-        </div>
-        <div class="option" id="guess-c">
-            <p id="p-c"></p>
-        </div>
-    </div>
+    </section>
     <script src="app.js" charset="utf-8"></script>
 </body>
 </html>

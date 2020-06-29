@@ -80,7 +80,7 @@ window.addEventListener("load", () => {
     };
     actualPosition = updateSet();
     guess_div.forEach((guess, index) => {
-        guess.addEventListener("click", function() {
+        guess.addEventListener("click", () => {
             guess_div[actualPosition].classList.add("green-glow");
             setTimeout(() => guess_div[actualPosition].classList.remove("green-glow"), 1500);
             if (index === actualPosition) {

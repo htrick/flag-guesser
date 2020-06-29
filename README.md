@@ -3,6 +3,8 @@
 Flag Guesser is a browser game to guess the country with the given Flag. A flag
 is shown and you are given three options to choose from.
 
+[Play the game here](https://htrick.github.io/flag-guesser/)
+
 ## Screenshots
 
 ![Starting Screen](img/screenshots/start.jpg)

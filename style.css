@@ -63,11 +63,6 @@ header > h1 {
     transition: all 0.6s ease;
 }
 
-.option:hover {
-    cursor: pointer;
-    background-color: #0e0f13;
-}
-
 .option > p {
     color: #e7e7e7;
     font-size: 1.2rem;
@@ -96,5 +91,12 @@ header > h1 {
 @media (min-width: 65rem) {
     .options {
         width: 30%;
+    }
+}
+
+@media (hover:hover) and (pointer:fine) {
+    .option:hover {
+        cursor: pointer;
+        background-color: #0e0f13;
     }
 }
